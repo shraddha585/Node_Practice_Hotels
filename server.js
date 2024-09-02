@@ -96,6 +96,8 @@ app.use('/person',personRoutes);
 const menuRoutes =require('./routes/menuRoutes');
 app.use('/menu',menuRoutes);
 
-app.listen(3000, async()=>{
+const PORT=process.env.PORT||3000;
+
+app.listen(PORT, async()=>{
 console.log("server is listen on port 3000" )
 })

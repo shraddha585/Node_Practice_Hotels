@@ -1,6 +1,11 @@
+//const { config } = require('dotenv');
 const mongoose=require('mongoose');
 //const mongoURL='mongodb://localhost:27017/collage'//collage is database
-const mongoURL='mongodb+srv://mahalleshraddha45:Mahalle@cluster0.pnjhl.mongodb.net/'
+//const mongoURL='mongodb+srv://mahalleshraddha45:Mahalle@cluster0.pnjhl.mongodb.net/'
+
+require('dotenv').config();
+
+const mongoURL=process.env.db_URL;
 mongoose.connect(mongoURL);
 
 //mongoose.connect(mongoURL,{--------------- it is used in other version compulsary
